@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/matt-allan/laravel-code-style).
+We accept contributions via Pull Requests on [Github](https://github.com/Jubeki/laravel-code-style).
 
 ## Scope
 

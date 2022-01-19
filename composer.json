@@ -1,13 +1,17 @@
 {
-    "name": "matt-allan/laravel-code-style",
+    "name": "jubeki/laravel-code-style",
     "description": "Code formatting for Laravel projects",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/matt-allan/laravel-code-style",
+    "homepage": "https://github.com/Jubeki/laravel-code-style",
     "authors": [
         {
             "name": "Matt Allan",
             "email": "matt@mattallan.me"
+        },
+        {
+            "name": "Julius Kiekbusch",
+            "email": "contact@julius-kiekbusch.de"
         }
     ],
     "keywords": [

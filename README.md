@@ -1,7 +1,7 @@
 ## Laravel Code Style
-[![Packagist License](https://poser.pugx.org/matt-allan/laravel-code-style/license.png)](http://choosealicense.com/licenses/mit/)
-[![Latest Stable Version](https://poser.pugx.org/matt-allan/laravel-code-style/version.png)](https://packagist.org/packages/matt-allan/laravel-code-style)
-![Tests](https://github.com/matt-allan/laravel-code-style/workflows/Tests/badge.svg)
+[![Packagist License](https://poser.pugx.org/Jubeki/laravel-code-style/license.png)](http://choosealicense.com/licenses/mit/)
+[![Latest Stable Version](https://poser.pugx.org/Jubeki/laravel-code-style/version.png)](https://packagist.org/packages/jubeki/laravel-code-style)
+![Tests](https://github.com/Jubeki/laravel-code-style/workflows/Tests/badge.svg)
 
 
 This package provides automatic code style checking and formatting for Laravel applications and packages. Your code is formatted following Laravel's code style guide.
@@ -19,7 +19,7 @@ If you are wondering why this package exists you can [read the announcement post
 Require this package with composer. It is recommended to only require the package for development.
 
 ```shell
-composer require matt-allan/laravel-code-style --dev
+composer require jubeki/laravel-code-style --dev
 ```
 
 The service provider will be automatically registered using [package discovery](https://laravel.com/docs/5.8/packages#package-discovery).
@@ -180,9 +180,10 @@ When Laravel changes the code style a new major release is created for this pack
 
  Laravel  | Code Style
 :---------|:----------
- 5.x      | [0.4.x](https://github.com/matt-allan/laravel-code-style/tree/0.4.0)
- 6.x-7.x  | [0.5.x](https://github.com/matt-allan/laravel-code-style/tree/0.5.0)
- 8.x      | [0.6.x](https://github.com/matt-allan/laravel-code-style/tree/0.6.0)
+ 5.x      | [0.4.x](https://github.com/Jubeki/laravel-code-style/tree/0.4.0)
+ 6.x-7.x  | [0.5.x](https://github.com/Jubeki/laravel-code-style/tree/0.5.0)
+ 8.x      | [0.6.x](https://github.com/Jubeki/laravel-code-style/tree/0.6.0) | [0.7.x](https://github.com/Jubeki/laravel-code-style/tree/0.7.0)
+ 9.x      | [0.8.x](https://github.com/Jubeki/laravel-code-style/tree/0.8.0)
 
 ## Change log
 
@@ -201,6 +202,7 @@ Please see [CONTRIBUTING](./.github/CONTRIBUTING.md) for details.
 ## Credits
 
 - [Matt Allan](https://github.com/matt-allan)
+- [Julius Kiekbusch](https://github.com/Jubeki)
 - [All Contributors](../../contributors)
 
 ## License

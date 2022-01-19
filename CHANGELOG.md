@@ -10,6 +10,15 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 0.8.0
+
+### Added
+- Added support for PHP 8.1
+- Added support for Laravel 9
+
+### Changed
+- Moved package from matt-allan/laravel-code-style to jubeki/laravel-code-style
+
 ## 0.7.0
 
 ### Added
