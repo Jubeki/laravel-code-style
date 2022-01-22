@@ -20,8 +20,6 @@ class GenerateRules
      * released version of PHP-CS-Fixer.
      */
     const UNRELEASED_RULES = [
-        // https://docs.styleci.io/fixers#laravel_phpdoc_separation
-        'laravel_phpdoc_separation',
         'phpdoc_singular_inheritdoc',
     ];
 
@@ -89,6 +87,9 @@ class GenerateRules
         ],
         'laravel_phpdoc_order' => [
             'LaravelCodeStyle/laravel_phpdoc_order' => true,
+        ],
+        'laravel_phpdoc_separation' => [
+            'LaravelCodeStyle/laravel_phpdoc_separation' => true,
         ],
         'lowercase_constants' => [
             'constant_case' => [
