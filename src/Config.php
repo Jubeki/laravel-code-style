@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace MattAllan\LaravelCodeStyle;
 
 use MattAllan\LaravelCodeStyle\Fixers\LaravelPhpdocAlignmentFixer;
+use MattAllan\LaravelCodeStyle\Fixers\LaravelPhpdocOrderFixer;
 use PhpCsFixer\ConfigInterface;
 
 class Config extends \PhpCsFixer\Config
@@ -60,6 +61,7 @@ class Config extends \PhpCsFixer\Config
             'integer_literal_case' => true,
             'braces' => false,
             'LaravelCodeStyle/laravel_phpdoc_alignment' => true,
+            'LaravelCodeStyle/laravel_phpdoc_order' => true,
             'lowercase_cast' => true,
             'constant_case' => [
                 'case' => 'lower',
@@ -198,6 +200,7 @@ class Config extends \PhpCsFixer\Config
         parent::__construct($name);
 
         $this->registerCustomFixers([
+            new LaravelPhpdocOrderFixer,
             new LaravelPhpdocAlignmentFixer,
         ]);
     }
