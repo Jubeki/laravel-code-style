@@ -87,7 +87,7 @@ class GenerateRules
             'braces' => false,
         ],
         'laravel_phpdoc_alignment' => [
-            'LaravelCodeStyle/laravel_phpdoc_align' => true,
+            'LaravelCodeStyle/laravel_phpdoc_alignment' => true,
         ],
         'lowercase_constants' => [
             'constant_case' => [
