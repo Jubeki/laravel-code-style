@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace MattAllan\LaravelCodeStyle;
 
+use MattAllan\LaravelCodeStyle\Fixers\LaravelPhpDocAlignFixer;
 use PhpCsFixer\ConfigInterface;
 
 class Config extends \PhpCsFixer\Config
@@ -58,6 +59,7 @@ class Config extends \PhpCsFixer\Config
             'indentation_type' => true,
             'integer_literal_case' => true,
             'braces' => false,
+            'LaravelCodeStyle/laravel_phpdoc_align' => true,
             'lowercase_cast' => true,
             'constant_case' => [
                 'case' => 'lower',
@@ -194,6 +196,10 @@ class Config extends \PhpCsFixer\Config
     public function __construct($name = 'Laravel')
     {
         parent::__construct($name);
+
+        $this->registerCustomFixers([
+            new LaravelPhpDocAlignFixer,
+        ]);
     }
 
     public function setRules(array $rules): ConfigInterface

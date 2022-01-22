@@ -20,8 +20,6 @@ class GenerateRules
      * released version of PHP-CS-Fixer.
      */
     const UNRELEASED_RULES = [
-        // https://docs.styleci.io/fixers#laravel_phpdoc_alignment
-        'laravel_phpdoc_alignment',
         // https://docs.styleci.io/fixers#laravel_phpdoc_order
         'laravel_phpdoc_order',
         // https://docs.styleci.io/fixers#laravel_phpdoc_separation
@@ -87,6 +85,9 @@ class GenerateRules
             // TODO: enable once braces fixers are split
             // See https://github.com/matt-allan/laravel-code-style/issues/47
             'braces' => false,
+        ],
+        'laravel_phpdoc_alignment' => [
+            'LaravelCodeStyle/laravel_phpdoc_align' => true,
         ],
         'lowercase_constants' => [
             'constant_case' => [
