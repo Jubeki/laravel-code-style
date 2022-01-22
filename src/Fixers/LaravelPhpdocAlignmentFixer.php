@@ -85,7 +85,7 @@ function a($foo, $bar) {}
      */
     public function getPriority(): int
     {
-        return -100;
+        return -42;
     }
 
     /**
