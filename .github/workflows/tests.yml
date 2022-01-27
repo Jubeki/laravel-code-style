@@ -16,13 +16,11 @@ jobs:
       max-parallel: 15
       matrix:
         php-versions: ['7.4', '8.0', '8.1']
-        laravel-versions: [^7.0, ^8.0, ^9.0]
+        laravel-versions: [^8.0, ^9.0]
         include:
-          - php-versions: 7.4
+          - laravel-versions: ^8.0
             dependency-version: "--prefer-lowest --prefer-stable"
         exclude:
-          - php-versions: 8.1
-            laravel-versions: ^7.0
           - php-versions: 7.4
             laravel-versions: ^9.0
     steps:
