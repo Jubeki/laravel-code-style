@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-use MattAllan\LaravelCodeStyle\Dev\GenerateRules;
+use Jubeki\LaravelCodeStyle\Dev\GenerateRules;
 
 require __DIR__ . '/../vendor/autoload.php';
 

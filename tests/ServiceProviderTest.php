@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MattAllan\LaravelCodeStyle;
+namespace Jubeki\LaravelCodeStyle;
 
 use Illuminate\Filesystem\Filesystem;
 use Mockery;

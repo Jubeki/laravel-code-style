@@ -1,6 +1,6 @@
 <?php
 
-namespace MattAllan\LaravelCodeStyle\Utils;
+namespace Jubeki\LaravelCodeStyle\Utils;
 
 use PhpCsFixer\DocBlock\Tag;
 

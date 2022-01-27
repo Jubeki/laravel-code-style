@@ -1,8 +1,8 @@
 <?php
 
-namespace MattAllan\LaravelCodeStyle\Fixers;
+namespace Jubeki\LaravelCodeStyle\Fixers;
 
-use MattAllan\LaravelCodeStyle\Utils\PhpdocTagComperator;
+use Jubeki\LaravelCodeStyle\Utils\PhpdocTagComperator;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\DocBlock\Annotation;
 use PhpCsFixer\DocBlock\DocBlock;

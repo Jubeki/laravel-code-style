@@ -22,7 +22,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "MattAllan\\LaravelCodeStyle\\": "src"
+            "Jubeki\\LaravelCodeStyle\\": "src"
         }
     },
     "require": {
@@ -43,7 +43,7 @@
         },
         "laravel": {
             "providers": [
-                "MattAllan\\LaravelCodeStyle\\ServiceProvider"
+                "Jubeki\\LaravelCodeStyle\\ServiceProvider"
             ]
         }
     },

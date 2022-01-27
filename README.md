@@ -28,13 +28,13 @@ If you don't use auto-discovery you should add the service provider to the provi
 
 ```php
 // existing providers...
-MattAllan\LaravelCodeStyle\ServiceProvider::class,
+Jubeki\LaravelCodeStyle\ServiceProvider::class,
 ```
 
 Once the package is installed you should publish the configuration.
 
 ```shell
-php artisan vendor:publish --provider="MattAllan\LaravelCodeStyle\ServiceProvider"
+php artisan vendor:publish --provider="Jubeki\LaravelCodeStyle\ServiceProvider"
 ```
 
 Publishing the config will add a `.php-cs-fixer.dist.php` configuration file to the root of your project.  You may customize this file as needed.  The `.php-cs-fixer.dist.php` file should be committed to version control.
@@ -101,7 +101,7 @@ The default configuration is published as `.php-cs-fixer.dist.php` in the projec
 
 ### Paths
 
-You can change the paths searched for PHP files by chaining method calls onto the `PhpCsFixer\Finder` instance being passed to the `MattAllan\LaravelCodeStyle\Config::setFinder` method.
+You can change the paths searched for PHP files by chaining method calls onto the `PhpCsFixer\Finder` instance being passed to the `Jubeki\LaravelCodeStyle\Config::setFinder` method.
 
 For example, to search the `examples` directory you would append `->in('examples')`:
 
@@ -110,7 +110,7 @@ For example, to search the `examples` directory you would append `->in('examples
 
 require __DIR__ . '/vendor/autoload.php';
 
-return (new MattAllan\LaravelCodeStyle\Config())
+return (new Jubeki\LaravelCodeStyle\Config())
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->in(app_path())
@@ -132,7 +132,7 @@ By default only the `@Laravel` preset is enabled.  This preset enforces the [PSR
 A `@Laravel:risky` preset is also available.  The `@Laravel:risky` preset enables rules that may change code behavior.  To enable risky rules you need to add the preset and set `isRiskyEnabled` to true.
 
 ```php
-return (new MattAllan\LaravelCodeStyle\Config())
+return (new Jubeki\LaravelCodeStyle\Config())
         ->setFinder(
             // ...
         )
@@ -146,7 +146,7 @@ return (new MattAllan\LaravelCodeStyle\Config())
 It is possible to override a specific rule from the preset.  For example, you could disable the `no_unused_imports` rule like this:
 
 ```php
-return (new MattAllan\LaravelCodeStyle\Config())
+return (new Jubeki\LaravelCodeStyle\Config())
         ->setFinder(
             // ...
         )

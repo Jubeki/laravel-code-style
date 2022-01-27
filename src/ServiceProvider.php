@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MattAllan\LaravelCodeStyle;
+namespace Jubeki\LaravelCodeStyle;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

@@ -5,7 +5,7 @@ require __DIR__ . '/vendor/autoload.php';
 $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__);
 
-return (new MattAllan\LaravelCodeStyle\Config())
+return (new Jubeki\LaravelCodeStyle\Config())
         ->setFinder($finder)
         ->setRules([
             '@Laravel' => true,

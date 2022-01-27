@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MattAllan\LaravelCodeStyle;
+namespace Jubeki\LaravelCodeStyle;
 
-use MattAllan\LaravelCodeStyle\Fixers\LaravelPhpdocAlignmentFixer;
-use MattAllan\LaravelCodeStyle\Fixers\LaravelPhpdocOrderFixer;
-use MattAllan\LaravelCodeStyle\Fixers\LaravelPhpdocSeparationFixer;
+use Jubeki\LaravelCodeStyle\Fixers\LaravelPhpdocAlignmentFixer;
+use Jubeki\LaravelCodeStyle\Fixers\LaravelPhpdocOrderFixer;
+use Jubeki\LaravelCodeStyle\Fixers\LaravelPhpdocSeparationFixer;
 use PhpCsFixer\ConfigInterface;
 
 class Config extends \PhpCsFixer\Config

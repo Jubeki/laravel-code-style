@@ -1,6 +1,6 @@
 <?php
 
-namespace MattAllan\LaravelCodeStyle\Fixers;
+namespace Jubeki\LaravelCodeStyle\Fixers;
 
 use PhpCsFixer\DocBlock\TypeExpression;
 use PhpCsFixer\Fixer\FixerInterface;

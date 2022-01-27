@@ -10,7 +10,7 @@ If you are just changing the ruleset to better match Laravel's code style go ahe
 
 ## Code Generation
 
-The `MattAllan\LaravelCodeStyle\Config::RULE_DEFINITIONS` array is generated. It should not be edited by hand. If you need to add a rule or change the config for a rule, you should first add it to `MattAllan\LaravelCodeStyle\Dev\GenerateRules`.
+The `Jubeki\LaravelCodeStyle\Config::RULE_DEFINITIONS` array is generated. It should not be edited by hand. If you need to add a rule or change the config for a rule, you should first add it to `Jubeki\LaravelCodeStyle\Dev\GenerateRules`.
 
 StyleCI does not always use the same rule names as PHPCS. To define a mapping you can add an entry to `GenerateRules::STYLECI_TO_PHPCS_MAP`.
 

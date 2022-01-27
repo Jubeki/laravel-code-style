@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MattAllan\LaravelCodeStyle\Dev;
+namespace Jubeki\LaravelCodeStyle\Dev;
 
 use Brick\VarExporter\VarExporter;
 use Illuminate\Support\Collection;
