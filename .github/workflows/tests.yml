@@ -8,18 +8,18 @@ on:
 
 jobs:
   phpunit:
-    name: Testing (PHP ${{ matrix.php-versions }} / Laravel ${{ matrix.laravel-versions }})
+    name: Testing - PHP ${{ matrix.php-version }} - Laravel ${{ matrix.laravel-version }} ${{ matrix.dependency-version }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
       fail-fast: false
       max-parallel: 15
       matrix:
-        php-versions: ['7.4', '8.0', '8.1']
+        php-version: ['7.4', '8.0', '8.1']
         laravel-versions: [^8.64, ^9.0]
         dependency-version: ['--prefer-lowest', '--prefer-stable']
         exclude:
-          - php-versions: 7.4
+          - php-version: 7.4
             laravel-versions: ^9.0
           - dependency-version: '--prefer-lowest'
             laravel-versions: ^9.0
@@ -30,24 +30,24 @@ jobs:
       - name: Install PHP
         uses: shivammathur/setup-php@master
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: ${{ matrix.php-version }}
 
       - name: Cache dependencies
         uses: actions/cache@v1
         with:
           path: ~/.composer/cache/files
-          key: php-${{ matrix.php-versions }}-composer-${{ hashFiles('composer.json') }}
+          key: php-${{ matrix.php-version }}-composer-${{ hashFiles('composer.json') }}
 
       - name: Validate Composer files
         run: composer validate
 
       - name: Update composer.json
         run: |
-          composer require illuminate/support:${{ matrix.laravel-versions }} --no-update
-          composer require --dev laravel/framework:${{ matrix.laravel-versions }} --no-update
+          composer require illuminate/support:${{ matrix.laravel-version }} --no-update
+          composer require --dev laravel/framework:${{ matrix.laravel-version }} --no-update
 
       - name: Install dependencies
-        run: composer update ${{ matrix.dependency-version }}  --prefer-dist --no-interaction --no-progress
+        run: composer update ${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-progress
 
       - name: Check for style violations
         run: vendor/bin/php-cs-fixer fix --dry-run --diff
