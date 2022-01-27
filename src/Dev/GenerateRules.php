@@ -234,7 +234,7 @@ class GenerateRules
 
         $replaced = preg_replace(
             '/(?<=const RULE_DEFINITIONS = )([^;]+)(?=;)/',
-            static::exportRules(),
+            $this->exportRules(),
             file_get_contents($path)
         );
 
@@ -243,9 +243,9 @@ class GenerateRules
 
     private function exportRules(): string
     {
-        $rules = VarExporter::export(static::rules()->toArray());
+        $rules = VarExporter::export($this->rules()->toArray());
 
-        return static::indent($rules);
+        return $this->indent($rules);
     }
 
     private function indent(string $rules): string
