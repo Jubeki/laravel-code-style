@@ -16,4 +16,7 @@ return (new Jubeki\LaravelCodeStyle\Config())
     )
     ->setRules([
         '@Laravel' => true,
-    ]);
+        // '@Laravel:risky' => true,
+    ])
+    // ->setRiskyAllowed(true)
+    ;
