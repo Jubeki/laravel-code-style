@@ -178,12 +178,22 @@ To ensure the rules stay in sync an automated test formats the entire Laravel fr
 
 When Laravel changes the code style a new major release is created for this package. You will need to edit the version constraint in your `composer.json` to pull in the updated rules. If you would like your code style to match a previous version of Laravel you may pull in an older release of this package.
 
+Versions below 1.x use the old Namespace `MattAllan\LaravelCodeStyle` instead of the new one `Jubeki\LaravelCodeStyle`
+
+### `MattAllan\LaravelCodeStyle`
+
  Laravel  | Code Style
 :---------|:----------
  5.x      | [0.4.x](https://github.com/Jubeki/laravel-code-style/tree/0.4.0)
  6.x-7.x  | [0.5.x](https://github.com/Jubeki/laravel-code-style/tree/0.5.0)
  8.x      | [0.6.x](https://github.com/Jubeki/laravel-code-style/tree/0.6.0) and [0.7.x](https://github.com/Jubeki/laravel-code-style/tree/0.7.0)
  9.x      | [0.8.x](https://github.com/Jubeki/laravel-code-style/tree/0.8.0)
+
+### `Jubeki\LaravelCodeStyle`
+
+ Laravel      | Code Style
+:-------------|:----------
+ ^8.64.0|^9.0 | [1.x](https://github.com/Jubeki/laravel-code-style/tree/1.0.0)
 
 ## Change log
 
