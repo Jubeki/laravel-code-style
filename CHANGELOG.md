@@ -10,6 +10,18 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 0.8.2
+
+### Fixed
+- Fixed language path for Laravel 9 in default config
+
+## 0.8.1
+
+### Added
+- Added `laravel_phpdoc_alignment` Fixer
+- Added `laravel_phpdoc_order` Fixer
+- Added `laravel_phpdoc_separation` Fixer
+
 ## 0.8.0
 
 ### Added
