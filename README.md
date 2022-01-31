@@ -193,7 +193,7 @@ Versions below 1.x use the old Namespace `MattAllan\LaravelCodeStyle` instead of
 
  Laravel      | Code Style
 :-------------|:----------
- ^8.64.0|^9.0 | [1.x](https://github.com/Jubeki/laravel-code-style/tree/1.0.0)
+ ^8.64.0\|^9.0 | [1.x](https://github.com/Jubeki/laravel-code-style/tree/1.0.0)
 
 ## Change log
 
