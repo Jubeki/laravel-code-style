@@ -10,6 +10,13 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 1.0.0
+
+### Changed
+- Move Namespace from `MattAllan\LaravelCodeStyle` to `Jubeki\LaravelCodeStyle`
+- Support only Laravel `^8.64.0|^9.0` because of the `lang_path()` helper
+- Update default config to new `lang_path()` helper
+
 ## 0.8.2
 
 ### Fixed
