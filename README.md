@@ -180,6 +180,12 @@ When Laravel changes the code style a new major release is created for this pack
 
 Versions below 1.x use the old Namespace `MattAllan\LaravelCodeStyle` instead of the new one `Jubeki\LaravelCodeStyle`
 
+### `Jubeki\LaravelCodeStyle`
+
+ Laravel      | Code Style
+:-------------|:----------
+ `^8.64.0\|^9.0` | [1.x](https://github.com/Jubeki/laravel-code-style/tree/1.0.0)
+
 ### `MattAllan\LaravelCodeStyle`
 
  Laravel  | Code Style
@@ -188,12 +194,6 @@ Versions below 1.x use the old Namespace `MattAllan\LaravelCodeStyle` instead of
  6.x-7.x  | [0.5.x](https://github.com/Jubeki/laravel-code-style/tree/0.5.0)
  8.x      | [0.6.x](https://github.com/Jubeki/laravel-code-style/tree/0.6.0) and [0.7.x](https://github.com/Jubeki/laravel-code-style/tree/0.7.0)
  9.x      | [0.8.x](https://github.com/Jubeki/laravel-code-style/tree/0.8.0)
-
-### `Jubeki\LaravelCodeStyle`
-
- Laravel      | Code Style
-:-------------|:----------
- ^8.64.0\|^9.0 | [1.x](https://github.com/Jubeki/laravel-code-style/tree/1.0.0)
 
 ## Change log
 
