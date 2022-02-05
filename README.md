@@ -1,4 +1,5 @@
 ## Laravel Code Style
+
 [![Packagist License](https://poser.pugx.org/Jubeki/laravel-code-style/license.png)](http://choosealicense.com/licenses/mit/)
 [![Latest Stable Version](https://poser.pugx.org/Jubeki/laravel-code-style/version.png)](https://packagist.org/packages/jubeki/laravel-code-style)
 ![Tests](https://github.com/Jubeki/laravel-code-style/workflows/Tests/badge.svg)
@@ -42,7 +43,7 @@ Publishing the config will add a `.php-cs-fixer.dist.php` configuration file to 
 A cache file will be written to `.php_cs.cache` in the project root the first time you run the fixer.  You should ignore this file so it is not added to your version control system.
 
 ```shell
-echo '.php_cs.cache' >> .gitignore
+echo '.php-cs-fixer.cache' >> .gitignore
 ```
 
 ## Usage
