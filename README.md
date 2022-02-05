@@ -40,7 +40,7 @@ php artisan vendor:publish --provider="Jubeki\LaravelCodeStyle\ServiceProvider"
 
 Publishing the config will add a `.php-cs-fixer.dist.php` configuration file to the root of your project.  You may customize this file as needed.  The `.php-cs-fixer.dist.php` file should be committed to version control.
 
-A cache file will be written to `.php_cs.cache` in the project root the first time you run the fixer.  You should ignore this file so it is not added to your version control system.
+A cache file will be written to `.php-cs-fixer.cache` in the project root the first time you run the fixer.  You should ignore this file so it is not added to your version control system.
 
 ```shell
 echo '.php-cs-fixer.cache' >> .gitignore
