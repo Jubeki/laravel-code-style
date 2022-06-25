@@ -4,6 +4,9 @@
 [![Latest Stable Version](https://poser.pugx.org/Jubeki/laravel-code-style/version.png)](https://packagist.org/packages/jubeki/laravel-code-style)
 ![Tests](https://github.com/Jubeki/laravel-code-style/workflows/Tests/badge.svg)
 
+> **Note**
+> Even though Laravel Pint was released, this package will continue to receive updates for future laravel versions. My main reason for that is that Pint doesn't support custom fixers which some people might want.
+> There will be no addition of new fixers.
 
 This package provides automatic code style checking and formatting for Laravel applications and packages. Your code is formatted following Laravel's code style guide.
 
