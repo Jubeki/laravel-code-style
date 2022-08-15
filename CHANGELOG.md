@@ -10,6 +10,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 1.0.2
+
+### Fixed
+- Added `*.blade.php` files to ignore list
+
 ## 1.0.1
 
 ### Fixed
