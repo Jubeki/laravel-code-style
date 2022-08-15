@@ -10,6 +10,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 1.0.1
+
+### Fixed
+- Added license and copyright information for PHP-CS-Fixer (My apologies for removing them)
+- Updated docs to reflect the correct PHP-CS-Fixer cached file 
+
 ## 1.0.0
 
 ### Changed
