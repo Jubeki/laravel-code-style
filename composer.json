@@ -27,12 +27,12 @@
     },
     "require": {
         "php": "^7.4|^8.0",
-        "friendsofphp/php-cs-fixer": "^3.4.0",
+        "friendsofphp/php-cs-fixer": "^3.11",
         "illuminate/support": "^8.0|^9.0"
     },
     "require-dev": {
         "brick/varexporter": "^0.3.2",
-        "laravel/framework": "^8.64.0|^9.0",
+        "laravel/framework": "^8.64|^9.0",
         "orchestra/testbench": "^6.24|^7.0",
         "phpunit/phpunit": "^9.5.10",
         "styleci/sdk": "^1.3"
