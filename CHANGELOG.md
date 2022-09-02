@@ -10,6 +10,18 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 1.1.0
+
+### Added
+- Added new rules from Styleci
+    - `class_reference_name_casing`
+    - `no_trailing_comma_in_singleline_function_call`
+    - `no_unneeded_import_alias`
+- Update to PHP-CS-Fixer v3.11
+
+> **Note**  
+> Deprecated Rules will be replaced as soon as StyleCI updates to PHP-CS-Fixer v3.11 and replaces their rules
+
 ## 1.0.2
 
 ### Fixed
