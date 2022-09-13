@@ -243,7 +243,7 @@ class GenerateRules
 
     private function exportRules(): string
     {
-        $rules = VarExporter::export($this->rules()->toArray());
+        $rules = VarExporter::export($this->rules()->toArray(), VarExporter::TRAILING_COMMA_IN_ARRAY);
 
         return $this->indent($rules);
     }
