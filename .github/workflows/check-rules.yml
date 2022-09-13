@@ -1,0 +1,48 @@
+name: Check for new Rules
+
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  check-rules:
+    name: Check for new rules
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache/files
+          key: php-8.1-composer-${{ hashFiles('composer.json') }}
+
+      - name: Update composer.json
+        run: |
+          composer require illuminate/support:^9.0 --no-update
+          composer require --dev laravel/framework:^9.0 --no-update
+
+      - name: Install dependencies
+        run: composer update --prefer-latest --prefer-dist --no-interaction --no-progress
+
+      - name: Fetch new rules from StyleCI
+        run: bin/gen-rules
+
+      - name: Simple Diff
+        uses: mudlabs/simple-diff@v1.2.0
+        id: diff
+        with:
+          path: src/Config.php
+
+      - name: Exit if the Rules have changed
+        run: exit 1
+        if: steps.diff.outputs.modified == true
