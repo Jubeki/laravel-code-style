@@ -32,10 +32,10 @@ jobs:
       - name: Fetch new rules from StyleCI
         run: bin/gen-rules
 
-      - name: Simple Diff
-        uses: mudlabs/simple-diff@v1.2.0
-        id: diff
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v29.0.5
 
       - name: Exit if the Rules have changed
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
         run: exit 1
-        if: steps.diff.outputs.modified == true
