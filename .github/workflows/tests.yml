@@ -1,4 +1,4 @@
-name: Tests
+name: Run Tests
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   phpunit:
-    name: Testing - PHP ${{ matrix.php-version }} - Laravel ${{ matrix.laravel-version }} ${{ matrix.dependency-version }}
+    name: PHP ${{ matrix.php-version }} - Laravel ${{ matrix.laravel-version }} - ${{ matrix.dependency-version }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
@@ -17,18 +17,18 @@ jobs:
       matrix:
         php-version: ['7.4', '8.0', '8.1']
         laravel-version: [^8.64, ^9.0]
-        dependency-version: ['--prefer-lowest', '--prefer-stable']
+        dependency-version: ['prefer-lowest', 'prefer-stable']
         exclude:
           - php-version: 7.4
             laravel-version: ^9.0
-          - dependency-version: '--prefer-lowest'
+          - dependency-version: 'prefer-lowest'
             laravel-version: ^9.0
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Install PHP
-        uses: shivammathur/setup-php@master
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
 
@@ -47,11 +47,10 @@ jobs:
           composer require --dev laravel/framework:${{ matrix.laravel-version }} --no-update
 
       - name: Install dependencies
-        run: composer update ${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-progress
+        run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-progress
 
       - name: Check for style violations
         run: vendor/bin/php-cs-fixer fix --dry-run --diff
 
       - name: Run test suite
         run: vendor/bin/phpunit
-
