@@ -44,7 +44,7 @@ jobs:
         run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-progress
 
       - name: Check for style violations
-        run: vendor/bin/php-cs-fixer fix --dry-run --diff
+        run: PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix --dry-run --diff
 
       - name: Run test suite
         run: vendor/bin/phpunit
