@@ -28,12 +28,12 @@
     "require": {
         "php": "^8.0",
         "friendsofphp/php-cs-fixer": "^3.11",
-        "illuminate/support": "^9.30"
+        "illuminate/support": "^9.30 || ^10"
     },
     "require-dev": {
         "brick/varexporter": "^0.3.2",
-        "laravel/framework": "^9.30",
-        "orchestra/testbench": "^7.0",
+        "laravel/framework": "^9.30 || ^10",
+        "orchestra/testbench": "^7.0 || ^8.0",
         "phpunit/phpunit": "^9.5.10",
         "styleci/sdk": "^1.3"
     },
