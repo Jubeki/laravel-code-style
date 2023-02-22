@@ -4,35 +4,19 @@
 [![Latest Stable Version](https://poser.pugx.org/Jubeki/laravel-code-style/version.png)](https://packagist.org/packages/jubeki/laravel-code-style)
 ![Tests](https://github.com/Jubeki/laravel-code-style/workflows/Tests/badge.svg)
 
-> **Note**
-> Even though Laravel Pint was released, this package will continue to receive updates for future laravel versions. My main reason for that is that Pint doesn't support custom fixers which some people might want.
-> There will be no addition of new fixers.
-
 This package provides automatic code style checking and formatting for Laravel applications and packages. Your code is formatted following Laravel's code style guide.
 
-The package adds the [php-cs-fixer](https://github.com/FriendsOfPhp/PHP-CS-Fixer) tool and a community maintained ruleset to your application.  The ruleset is a best effort attempt to match the code style the Laravel framework itself uses.  Check out an [example](./examples/User.php) to see what the code style looks like.
-
-You might want to use this package if you are writing a Laravel application, package or tutorial and you want to match the framework's code style.
-
-If you are wondering why this package exists you can [read the announcement post](https://mattallan.me/posts/automate-code-formatting-for-laravel-projects/).
+The package adds the [php-cs-fixer](https://github.com/FriendsOfPhp/PHP-CS-Fixer) tool and the Laravel Pint ruleset, while still giving you the ability to add custom fixers.
 
 ## Installation
 
-> ⚠️ These docs are for the latest version. If you are using an older version you can find the docs for previous releases [here](#releases).
+> **Note**  
+> These docs are for the latest version. If you are using an older version you can find the docs for previous releases [here](#releases).
 
 Require this package with composer. It is recommended to only require the package for development.
 
 ```shell
 composer require jubeki/laravel-code-style --dev
-```
-
-The service provider will be automatically registered using [package discovery](https://laravel.com/docs/5.8/packages#package-discovery).
-
-If you don't use auto-discovery you should add the service provider to the providers array in `config/app.php`.
-
-```php
-// existing providers...
-Jubeki\LaravelCodeStyle\ServiceProvider::class,
 ```
 
 Once the package is installed you should publish the configuration.
@@ -51,7 +35,7 @@ echo '.php-cs-fixer.cache' >> .gitignore
 
 ## Usage
 
-Once the package is installed you can check and fix your code formatting with the `php-cs-fixer` command.  The command will be available in Composer's `vendor/bin` directory.
+Once the package is installed you can check and fix your code formatting with the `vendor/bin/php-cs-fixer` command.
 
 ### Fixing
 
@@ -77,7 +61,7 @@ If you would like to check the formatting without actually altering any files yo
 vendor/bin/php-cs-fixer fix --dry-run --diff
 ```
 
-In dry-run mode any violations will [cause the command to return a non-zero exit code](https://github.com/FriendsOfPhp/PHP-CS-Fixer#exit-code).  You can use this command to fail a CI build or git commit hook.
+In dry-run mode any violations will [cause the command to return a non-zero exit code](https://github.com/FriendsOfPhp/PHP-CS-Fixer#exit-code). You can use this command to fail a CI build or git commit hook.
 
 ### Composer script
 
@@ -85,7 +69,7 @@ To make checking and fixing code style easier for contributors to your project i
 
 The following example allows anyone to check the code style by calling `composer check-style` and to fix the code style with `composer fix-style`.
 
-```javascript
+```json
 {
     // ...
     "scripts": {
@@ -97,7 +81,7 @@ The following example allows anyone to check the code style by calling `composer
 
 ### More Options
 
-For a complete list of options please consult the [php-cs-fixer documentation](https://github.com/FriendsOfPhp/PHP-CS-Fixer#usage).
+For a complete list of options please consult the [PHP-CS-Fixer documentation](https://github.com/FriendsOfPhp/PHP-CS-Fixer#usage).
 
 ## Configuration
 
@@ -131,23 +115,9 @@ For a complete list of options refer to the [Symfony Finder documentation](https
 
 ### Rules
 
-By default only the `@Laravel` preset is enabled.  This preset enforces the [PSR-2 standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) as well as nearly 100 other rules such as ordering use statements alphabetically and requiring trailing commas in multiline arrays.
+By default only the Laravel Pint preset is enabled. This preset enforces many different rules which can be found in [Jubeki\LaravelCodeStyle\Config](src/Config.php)
 
-A `@Laravel:risky` preset is also available.  The `@Laravel:risky` preset enables rules that may change code behavior.  To enable risky rules you need to add the preset and set `isRiskyEnabled` to true.
-
-```php
-return (new Jubeki\LaravelCodeStyle\Config())
-        ->setFinder(
-            // ...
-        )
-        ->setRules([
-            '@Laravel' => true,
-            '@Laravel:risky' => true,
-        ])
-        ->setRiskyAllowed(true);
-```
-
-It is possible to override a specific rule from the preset.  For example, you could disable the `no_unused_imports` rule like this:
+It is possible to override a specific rule from the preset. For example, you could disable the `no_unused_imports` rule like this:
 
 ```php
 return (new Jubeki\LaravelCodeStyle\Config())
@@ -155,7 +125,6 @@ return (new Jubeki\LaravelCodeStyle\Config())
             // ...
         )
         ->setRules([
-            '@Laravel' => true,
             'no_unused_imports' => false,
         ]);
 ```
@@ -170,36 +139,13 @@ To automatically fix the code style when someone opens a pull request or pushes 
 
 Any editor plugin for php-cs-fixer will work. Check the [php-cs-fixer readme](https://github.com/FriendsOfPhp/PHP-CS-Fixer#helpers) for more info.
 
-## How It Works
-
-Laravel does not publish an official php-cs-fixer ruleset.  To create the rule set we compare StyleCI's preset to the available php-cs-fixer rules.  In some cases StyleCI is using a rule that is no longer available.  For these rules we have to dig through the git history of php-cs-fixer and determine which rule replaced the deprecated rule.
-
-It isn't possible to add your own presets to php-cs-fixer.  Instead `PhpCsFixer\Config` is extended to search the rules for our custom presets and merge the rules if they are found.
-
-To ensure the rules stay in sync an automated test formats the entire Laravel framework and compares the results.  If an existing Laravel file does not match our rule set the build is failed.
-
 ## Releases
 
-When Laravel changes the code style a new major release is created for this package. You will need to edit the version constraint in your `composer.json` to pull in the updated rules. If you would like your code style to match a previous version of Laravel you may pull in an older release of this package.
+A major version bump only occurs should there be a big change to the Laravel Pint project.
 
-Versions below 1.x use the old Namespace `MattAllan\LaravelCodeStyle` instead of the new one `Jubeki\LaravelCodeStyle`
+Otherwise each rule change according to Laravel Pint is only a minor version bump. (This means there can be rules added, changed or removed).
 
-### `Jubeki\LaravelCodeStyle`
-
- Laravel      | Code Style
-:-------------|:----------
- `^8.64.0\|^9.0` | [1.x](https://github.com/Jubeki/laravel-code-style/tree/1.0.0)
-
-### `MattAllan\LaravelCodeStyle`
-
- Laravel  | Code Style
-:---------|:----------
- 5.x      | [0.4.x](https://github.com/Jubeki/laravel-code-style/tree/0.4.0)
- 6.x-7.x  | [0.5.x](https://github.com/Jubeki/laravel-code-style/tree/0.5.0)
- 8.x      | [0.6.x](https://github.com/Jubeki/laravel-code-style/tree/0.6.0) and [0.7.x](https://github.com/Jubeki/laravel-code-style/tree/0.7.0)
- 9.x      | [0.8.x](https://github.com/Jubeki/laravel-code-style/tree/0.8.0)
-
-## Change log
+## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 

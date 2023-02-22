@@ -10,8 +10,7 @@
 /.php-cs-fixer.dist.php      export-ignore
 /.php-cs-fixer.cache         export-ignore
 /phpunit.xml.dist            export-ignore
-/examples                    export-ignore
 /tests                       export-ignore
-/bin                         export-ignore
 /vendor                      export-ignore
 /composer.lock               export-ignore
+/laravel                     export-ignore

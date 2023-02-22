@@ -4,7 +4,6 @@ namespace Jubeki\LaravelCodeStyle\Fixers;
 
 use PhpCsFixer\DocBlock\TypeExpression;
 use PhpCsFixer\Fixer\FixerInterface;
-use PhpCsFixer\FixerDefinition\CodeSample;
 use PhpCsFixer\FixerDefinition\FixerDefinition;
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
 use PhpCsFixer\Tokenizer\Token;
@@ -12,8 +11,9 @@ use PhpCsFixer\Tokenizer\Tokens;
 use SplFileInfo;
 
 /*
- * Some code in this file is part of PHP CS Fixer.
+ * This code is part of laravel/pint and some code parts are from PHP CS Fixer.
  *
+ * Copyright (c) Taylor Otwell
  * Copyright (c) 2012-2022 Fabien Potencier, Dariusz Rumiński
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +33,23 @@ use SplFileInfo;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-final class LaravelPhpdocAlignmentFixer implements FixerInterface
+
+class LaravelPhpdocAlignmentFixer implements FixerInterface
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function getName(): string
+    {
+        return 'Laravel/laravel_phpdoc_alignment';
+    }
+
     /**
      * {@inheritdoc}
      */
     public function isCandidate(Tokens $tokens): bool
     {
-        return $tokens->isAnyTokenKindsFound([\T_DOC_COMMENT]);
+        return $tokens->isAnyTokenKindsFound([T_DOC_COMMENT]);
     }
 
     /**
@@ -63,17 +72,15 @@ final class LaravelPhpdocAlignmentFixer implements FixerInterface
 
             $newContent = preg_replace_callback(
                 '/(?P<tag>@param)\s+(?P<hint>(?:'.TypeExpression::REGEX_TYPES.')?)\s+(?P<var>(?:&|\.{3})?\$\S+)/ux',
-                function ($matches) {
-                    return $matches['tag'].'  '.$matches['hint'].'  '.$matches['var'];
-                },
+                fn ($matches) => $matches['tag'].'  '.$matches['hint'].'  '.$matches['var'],
                 $tokens[$index]->getContent()
             );
 
-            if ($newContent === $tokens[$index]->getContent()) {
+            if ($newContent == $tokens[$index]->getContent()) {
                 continue;
             }
 
-            $tokens[$index] = new Token([\T_DOC_COMMENT, $newContent]);
+            $tokens[$index] = new Token([T_DOC_COMMENT, $newContent]);
         }
     }
 
@@ -82,24 +89,7 @@ final class LaravelPhpdocAlignmentFixer implements FixerInterface
      */
     public function getDefinition(): FixerDefinitionInterface
     {
-        return new FixerDefinition('After @param must be two spaces and after the Type Definition must also be two spaces.', [
-            new CodeSample('<?php
-/**
- * @param string $foo
- * @param  string  $bar
- * @return string
- */
-function a($foo, $bar) {}
-'),
-        ]);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getName(): string
-    {
-        return 'LaravelCodeStyle/laravel_phpdoc_alignment';
+        return new FixerDefinition('@param and type definition must be followed by two spaces.', []);
     }
 
     /**

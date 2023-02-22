@@ -3,7 +3,6 @@ name: Run Tests
 on:
   push:
     branches:
-      - main
       - '*.x'
   pull_request:
   schedule:
@@ -11,7 +10,7 @@ on:
 
 jobs:
   phpunit:
-    name: PHP ${{ matrix.php-version }} - Laravel ${{ matrix.laravel-version }} - ${{ matrix.dependency-version }}
+    name: PHP ${{ matrix.php-version }} - Laravel ${{ matrix.laravel-version }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
@@ -19,7 +18,6 @@ jobs:
       matrix:
         php-version: ['8.0', '8.1', '8.2']
         laravel-version: [^9.34, ^10.0]
-        dependency-version: ['prefer-stable']
         exclude:
           - php-version: '8.0'
             laravel-version: ^10.0
@@ -44,13 +42,15 @@ jobs:
       - name: Update composer.json
         run: |
           composer require illuminate/support:${{ matrix.laravel-version }} --no-update
-          composer require --dev laravel/framework:${{ matrix.laravel-version }} --no-update
 
       - name: Install dependencies
-        run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-progress
+        run: composer update --prefer-stable --prefer-dist --no-interaction --no-progress
 
       - name: Check for style violations
         run: PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix --dry-run --diff
+
+      - name: Clone the laravel skeleton
+        run: git clone https://github.com/laravel/laravel.git --single-branch --depth 1
 
       - name: Run test suite
         run: vendor/bin/phpunit
