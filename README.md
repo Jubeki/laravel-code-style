@@ -2,7 +2,7 @@
 
 [![Packagist License](https://poser.pugx.org/Jubeki/laravel-code-style/license.png)](http://choosealicense.com/licenses/mit/)
 [![Latest Stable Version](https://poser.pugx.org/Jubeki/laravel-code-style/version.png)](https://packagist.org/packages/jubeki/laravel-code-style)
-![Tests](https://github.com/Jubeki/laravel-code-style/workflows/Tests/badge.svg)
+[![Run Tests](https://github.com/Jubeki/laravel-code-style/actions/workflows/tests.yml/badge.svg)](https://github.com/Jubeki/laravel-code-style/actions/workflows/tests.yml)
 
 This package provides automatic code style checking and formatting for Laravel applications and packages. Your code is formatted following Laravel's code style guide.
 
