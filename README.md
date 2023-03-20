@@ -3,14 +3,14 @@
 </h1>
 
 <p align="center">
-    Combine Custom Fixers with the rules of Laravel Pint
+    Combine Custom Fixers with the ruleset of Laravel Pint
 </p>
 
 <p align="center">
     <a href="https://github.com/Jubeki/laravel-code-style/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Jubeki/laravel-code-style/tests.yml?branch=2.x&label=Tests&logo=github&style=for-the-badge"></a>
-    <a href=""><img alt="Downloads Total" src="https://img.shields.io/packagist/dt/Jubeki/laravel-code-style?style=for-the-badge"></a>
-    <a href=""><img alt="License Type" src="https://img.shields.io/github/license/Jubeki/laravel-code-style?style=for-the-badge"></a>
-    <a href=""><img alt="Latest released version" src="https://img.shields.io/github/v/release/Jubeki/laravel-code-style?sort=semver&style=for-the-badge"></a>
+    <a href="https://packagist.org/packages/jubeki/laravel-code-style/stats"><img alt="Downloads Total" src="https://img.shields.io/packagist/dt/Jubeki/laravel-code-style?style=for-the-badge"></a>
+    <a href="LICENSE.md"><img alt="License Type" src="https://img.shields.io/github/license/Jubeki/laravel-code-style?style=for-the-badge"></a>
+    <a href="https://github.com/Jubeki/laravel-code-style/releases/latest"><img alt="Latest released version" src="https://img.shields.io/github/v/release/Jubeki/laravel-code-style?sort=semver&style=for-the-badge"></a>
 </p>
 
 <p align="center">
