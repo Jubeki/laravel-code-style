@@ -10,11 +10,15 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
-## 2.0.0
+## 2.0.1
 
 ### Changed
 
-- Uses Laravel Pint Preset instead of Style CI
+- Updated texts in the documentation
+
+### Fixed
+
+- Include `php-cs-fixer.dist.php` again
 
 ### Removed
 
