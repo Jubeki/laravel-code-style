@@ -1,19 +1,28 @@
-## Laravel Code Style
+<h1 align="center">
+    Laravel Code Style
+<h1>
 
-[![Packagist License](https://poser.pugx.org/Jubeki/laravel-code-style/license.png)](http://choosealicense.com/licenses/mit/)
-[![Latest Stable Version](https://poser.pugx.org/Jubeki/laravel-code-style/version.png)](https://packagist.org/packages/jubeki/laravel-code-style)
-[![Run Tests](https://github.com/Jubeki/laravel-code-style/actions/workflows/tests.yml/badge.svg)](https://github.com/Jubeki/laravel-code-style/actions/workflows/tests.yml)
+<p align="center">
+    Combine Custom Fixers with the rules of Laravel Pint
+</p>
 
-This package provides automatic code style checking and formatting for Laravel applications and packages. Your code is formatted following Laravel's code style guide.
+<p align="center">
+    <a href="https://github.com/Jubeki/laravel-code-style/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Jubeki/laravel-code-style/tests.yml?branch=2.x&label=Tests&logo=github&style=for-the-badge"></a>
+    <a href=""><img alt="Downloads Total" src="https://img.shields.io/packagist/dt/Jubeki/laravel-code-style?style=for-the-badge"></a>
+    <a href=""><img alt="License Type" src="https://img.shields.io/github/license/Jubeki/laravel-code-style?style=for-the-badge"></a>
+    <a href=""><img alt="Latest released version" src="https://img.shields.io/github/v/release/Jubeki/laravel-code-style?sort=semver&style=for-the-badge"></a>
+</p>
 
-The package adds the [php-cs-fixer](https://github.com/FriendsOfPhp/PHP-CS-Fixer) tool and the Laravel Pint ruleset, while still giving you the ability to add custom fixers.
+<p align="center">
+    <a href="https://laravel.com"><img alt="Supports Laravel 9.x and 10.x" src="https://img.shields.io/badge/Laravel-9.x|10.x-FF2D20?style=for-the-badge&logo=laravel"></a>
+    <a href="https://php.net"><img alt="Supports PHP 8.0, 8.1 and 8.2" src="https://img.shields.io/badge/PHP-8.0|8.1|8.2-777BB4?style=for-the-badge&logo=php"></a>
+</p>
+
+## Introduction
+
+This package provides automatic code style checking and formatting for Laravel applications and packages using the same ruleset as [Laravel Pint](https://github.com/laravel/pint). This package is built on top of [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) and therefor gives you the ability to add custom fixers. (which is one of the shortcomings of Laravel Pint)
 
 ## Installation
-
-> **Note**  
-> These docs are for the latest version. If you are using an older version you can find the docs for previous releases [here](#releases).
-
-Require this package with composer. It is recommended to only require the package for development.
 
 ```shell
 composer require jubeki/laravel-code-style --dev
@@ -25,9 +34,9 @@ Once the package is installed you should publish the configuration.
 php artisan vendor:publish --provider="Jubeki\LaravelCodeStyle\ServiceProvider"
 ```
 
-Publishing the config will add a `.php-cs-fixer.dist.php` configuration file to the root of your project.  You may customize this file as needed.  The `.php-cs-fixer.dist.php` file should be committed to version control.
+Publishing the config will add a `.php-cs-fixer.dist.php` configuration file to the root of your project. You may customize this file as needed and then commit it to your version control system.
 
-A cache file will be written to `.php-cs-fixer.cache` in the project root the first time you run the fixer.  You should ignore this file so it is not added to your version control system.
+A cache file will be written to `.php-cs-fixer.cache` in the project root the first time you run the fixer. You should ignore this file so it is not added to your version control system.
 
 ```shell
 echo '.php-cs-fixer.cache' >> .gitignore
@@ -35,25 +44,19 @@ echo '.php-cs-fixer.cache' >> .gitignore
 
 ## Usage
 
-Once the package is installed you can check and fix your code formatting with the `vendor/bin/php-cs-fixer` command.
+Once the package is installed you can check and fix your code formatting with the on subcommand of `vendor/bin/php-cs-fixer`.
 
-### Fixing
+### Automatically fix the code style
 
-To automatically fix the code style of your project you may use the `php-cs-fixer fix` command.
+To automatically fix the code style of your project you may use the following command:
 
 ```shell
 vendor/bin/php-cs-fixer fix
 ```
 
-This will automatically fix the code style of every file in your project.
-
 By default only the file names of every file fixed will be shown.  To see a full diff of every change append the `--diff` flag.
 
-```shell
-vendor/bin/php-cs-fixer fix --diff
-```
-
-### Checking
+### Checking for code style violations
 
 If you would like to check the formatting without actually altering any files you should use the `fix` command with the `--dry-run` flag.
 
@@ -65,13 +68,10 @@ In dry-run mode any violations will [cause the command to return a non-zero exit
 
 ### Composer script
 
-To make checking and fixing code style easier for contributors to your project it's recommended to add the commands as a [composer script](https://getcomposer.org/doc/articles/scripts.md).
-
-The following example allows anyone to check the code style by calling `composer check-style` and to fix the code style with `composer fix-style`.
+To make checking and fixing code style easier for contributors to your project it's recommended to add the commands as a [composer script](https://getcomposer.org/doc/articles/scripts.md):
 
 ```json
 {
-    // ...
     "scripts": {
         "check-style": "php-cs-fixer fix --dry-run --diff",
         "fix-style": "php-cs-fixer fix"
@@ -131,14 +131,6 @@ return (new Jubeki\LaravelCodeStyle\Config())
 
 For a complete list of available rules please refer to the [php-cs-fixer documentation](https://github.com/FriendsOfPhp/PHP-CS-Fixer#usage).
 
-## Continuous Integration
-
-To automatically fix the code style when someone opens a pull request or pushes a commit check out [StyleCI](https://styleci.io).  StyleCI wrote many of the open source fixer rules this package depends on and StyleCI's Laravel preset is the official definition of Laravel's code style.
-
-## Editor Support
-
-Any editor plugin for php-cs-fixer will work. Check the [php-cs-fixer readme](https://github.com/FriendsOfPhp/PHP-CS-Fixer#helpers) for more info.
-
 ## Releases
 
 A major version bump only occurs should there be a big change to the Laravel Pint project.
@@ -161,8 +153,8 @@ Please see [CONTRIBUTING](./.github/CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Matt Allan](https://github.com/matt-allan)
 - [Julius Kiekbusch](https://github.com/Jubeki)
+- [Matt Allan](https://github.com/matt-allan) (Original Creator)
 - [All Contributors](../../contributors)
 
 ## License
