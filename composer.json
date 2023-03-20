@@ -16,8 +16,10 @@
     ],
     "keywords": [
         "laravel",
+        "pint",
         "code-style",
-        "php-cs-fixer"
+        "php-cs-fixer",
+        "custom-fixers"
     ],
     "autoload": {
         "psr-4": {
