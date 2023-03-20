@@ -1,6 +1,6 @@
 <h1 align="center">
     Laravel Code Style
-<h1>
+</h1>
 
 <p align="center">
     Combine Custom Fixers with the rules of Laravel Pint
