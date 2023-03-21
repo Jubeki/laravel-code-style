@@ -10,6 +10,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.1.0
+
+### Added
+
+- Enable self_static_accessor fixer
+
 ## 2.0.1
 
 ### Changed
