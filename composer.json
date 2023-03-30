@@ -1,6 +1,6 @@
 {
     "name": "jubeki/laravel-code-style",
-    "description": "Code formatting for Laravel projects",
+    "description": "Combine Custom Fixers with the ruleset of Laravel Pint to fix your code style in Laravel Applications/Packages.",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/Jubeki/laravel-code-style",
