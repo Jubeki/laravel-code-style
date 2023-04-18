@@ -10,6 +10,18 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.3.0
+
+### Added
+
+- Enable method_chaining_indentation fixer
+
+## 2.2.0
+
+### Changed
+
+- Replace deprecated braces rule
+
 ## 2.1.0
 
 ### Added
