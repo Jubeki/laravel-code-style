@@ -194,7 +194,7 @@ class Config extends \PhpCsFixer\Config
         'single_space_around_construct' => true,
         'space_after_semicolon' => true,
         'standardize_not_equals' => true,
-        'statement_indentation' => false,
+        'statement_indentation' => true,
         'switch_case_semicolon_to_colon' => true,
         'switch_case_space' => true,
         'ternary_operator_spaces' => true,
