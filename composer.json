@@ -28,7 +28,7 @@
     },
     "require": {
         "php": "^8.0",
-        "friendsofphp/php-cs-fixer": "^3.14.4",
+        "friendsofphp/php-cs-fixer": "^3.18",
         "illuminate/support": "^9.30 || ^10.0"
     },
     "require-dev": {
