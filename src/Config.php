@@ -144,6 +144,10 @@ class Config extends \PhpCsFixer\Config
         'no_whitespace_in_blank_line' => true,
         'normalize_index_brace' => true,
         'not_operator_with_successor_space' => true,
+        'nullable_type_declaration' => true,
+        'nullable_type_declaration_for_default_null_value' => [
+            'use_nullable_type_declaration' => false,
+        ],
         'object_operator_without_whitespace' => true,
         'ordered_imports' => ['sort_algorithm' => 'alpha'],
         'psr_autoloading' => false,
@@ -200,6 +204,7 @@ class Config extends \PhpCsFixer\Config
         'ternary_operator_spaces' => true,
         'trailing_comma_in_multiline' => ['elements' => ['arrays']],
         'trim_array_spaces' => true,
+        'type_declaration_spaces' => true,
         'types_spaces' => true,
         'unary_operator_spaces' => true,
         'visibility_required' => [
