@@ -12,7 +12,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## 2.5.0
 
-## Added
+### Added
 
 - Bump PHP-CS-Fixer to `^3.21`
 - Enable nullable_type_declaration_for_default_null_value fixer (see [laravel/pint#192](https://github.com/laravel/pint/pull/192))
@@ -22,7 +22,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## 2.4.1
 
-## Changed
+### Changed
 
 - Bump PHP-CS-Fixer to `^3.18`
 - Replace deprecated rule [`single_blank_line_before_namespace`](https://cs.symfony.com/doc/rules/namespace_notation/single_blank_line_before_namespace.html) with newer [`blank_lines_before_namespace`](https://cs.symfony.com/doc/rules/namespace_notation/blank_lines_before_namespace.html)
