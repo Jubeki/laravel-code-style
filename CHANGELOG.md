@@ -10,6 +10,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.5.1
+
+### Fixed
+
+- Remove deprecated function_typehint_space rule (see [laravel/pint#197](https://github.com/laravel/pint/pull/197))
+
 ## 2.5.0
 
 ### Added
