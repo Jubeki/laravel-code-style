@@ -10,6 +10,22 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.8.0
+### Changed
+
+- Add rule `yoda_style` (see [laravel/pint#210](https://github.com/laravel/pint/pull/210))
+
+## 2.7.0
+### Changed
+
+- Orders interfaces and traits (see [laravel/pint#206](https://github.com/laravel/pint/pull/206))
+- Sort fixers by name (see [laravel/pint#207](https://github.com/laravel/pint/pull/207))
+
+## 2.6.0
+### Changed
+
+- Improves imports when using functions (see [laravel/pint#205](https://github.com/laravel/pint/pull/205))
+
 ## 2.5.1
 
 ### Fixed
