@@ -213,6 +213,12 @@ class Config extends \PhpCsFixer\Config
             'elements' => ['method', 'property'],
         ],
         'whitespace_after_comma_in_array' => true,
+        'yoda_style' => [
+            'always_move_variable' => true,
+            'equal' => false,
+            'identical' => false,
+            'less_and_greater' => false,
+        ],
 
         // Laravel
         'Laravel/laravel_phpdoc_alignment' => true,
