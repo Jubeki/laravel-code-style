@@ -10,10 +10,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
-## 2.8.0
+## 2.8.1
 ### Changed
 
-- Add rule `yoda_style` (see [laravel/pint#210](https://github.com/laravel/pint/pull/210))
+- Fixes non yoda_style rule moving variables (see [laravel/pint#213](https://github.com/laravel/pint/pull/213))
 
 ## 2.7.0
 ### Changed
