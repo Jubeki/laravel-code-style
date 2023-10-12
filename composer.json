@@ -29,12 +29,12 @@
     "require": {
         "php": "^8.0",
         "friendsofphp/php-cs-fixer": "^3.34.1",
-        "illuminate/support": "^9.30 || ^10.0"
+        "illuminate/support": "^9.34 || ^10.0"
     },
     "require-dev": {
-        "laravel/framework": "^9.30 || ^10.0",
-        "orchestra/testbench": "^7.0 || ^8.0",
-        "phpunit/phpunit": "^9.5.10 || ^10.4.1"
+        "laravel/framework": "^10.0",
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.4.1"
     },
     "extra": {
         "laravel": {
