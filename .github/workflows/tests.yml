@@ -43,7 +43,7 @@ jobs:
         run: composer update --prefer-stable --prefer-dist --no-interaction --no-progress
 
       - name: Check for style violations
-        run: PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix --dry-run --diff
+        run: vendor/bin/php-cs-fixer fix --dry-run --diff
 
       - name: Clone the laravel skeleton
         run: git clone https://github.com/laravel/laravel.git --single-branch --depth 1
