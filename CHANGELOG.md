@@ -10,6 +10,21 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.11.0
+### Changed
+
+- Disables fully_qualified_strict_types (see [laravel/pint#240](https://github.com/laravel/pint/pull/240))
+
+## 2.10.0
+### Changed
+
+- Change default for nullable_type_declaration_for_default_null_value (see [laravel/pint#236](https://github.com/laravel/pint/pull/236))
+
+## 2.9.0
+### Changed
+
+- Replace deprecated rules (see [laravel/pint#224](https://github.com/laravel/pint/pull/224))
+
 ## 2.8.1
 ### Changed
 
