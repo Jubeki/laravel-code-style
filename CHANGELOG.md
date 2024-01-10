@@ -10,6 +10,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.12.0
+### Changed
+
+- Adds support for Laravel 11
+
 ## 2.11.0
 ### Changed
 
