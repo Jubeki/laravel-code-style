@@ -32,7 +32,6 @@
         "illuminate/support": "^9.34 || ^10.0 || ^11.0"
     },
     "require-dev": {
-        "laravel/framework": "^10.0",
         "orchestra/testbench": "^8.0 || ^9.0",
         "phpunit/phpunit": "^10.4.1"
     },
