@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Jubeki\LaravelCodeStyle;
 
-use Jubeki\LaravelCodeStyle\Fixers\LaravelPhpdocAlignmentFixer;
 use PhpCsFixer\ConfigInterface;
 
 class Config extends \PhpCsFixer\Config
@@ -149,6 +148,12 @@ class Config extends \PhpCsFixer\Config
         'ordered_imports' => ['sort_algorithm' => 'alpha', 'imports_order' => ['const', 'class', 'function']],
         'ordered_interfaces' => true,
         'ordered_traits' => true,
+        'phpdoc_align' => [
+            'align' => 'left',
+            'spacing' => [
+                'param' => 2,
+            ],
+        ],
         'phpdoc_indent' => true,
         'phpdoc_inline_tag_normalizer' => true,
         'phpdoc_no_access' => true,
@@ -217,24 +222,17 @@ class Config extends \PhpCsFixer\Config
             'identical' => false,
             'less_and_greater' => false,
         ],
-
-        // Laravel
-        'Laravel/laravel_phpdoc_alignment' => true,
     ];
 
     public function __construct($name = 'Laravel')
     {
         parent::__construct($name);
 
-        $this->registerCustomFixers([
-            new LaravelPhpdocAlignmentFixer,
-        ]);
-
-        $this->setRules([]);
+        $this->setRules();
         $this->setRiskyAllowed(true);
     }
 
-    public function setRules(array $rules): ConfigInterface
+    public function setRules(array $rules = []): ConfigInterface
     {
         return parent::setRules(
             array_merge(self::RULE_DEFINITIONS, $rules)
