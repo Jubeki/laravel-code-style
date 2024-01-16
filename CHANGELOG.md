@@ -10,6 +10,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.13.0
+### Changed
+
+- Replace custom phpdoc_align rule with php-cs-fixer option (see [laravel/pint#242](https://github.com/laravel/pint/pull/242))
+
 ## 2.12.0
 ### Changed
 
