@@ -10,6 +10,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.14.0
+### Changed
+
+- Enable single_line_empty_body rule (see [laravel/pint#277](https://github.com/laravel/pint/pull/277))
+
 ## 2.13.0
 ### Changed
 
