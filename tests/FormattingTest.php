@@ -13,7 +13,7 @@ class FormattingTest extends TestCase
 {
     public function test_formatting_matches_laravel()
     {
-        $application = tap(new Application())->setAutoExit(false);
+        $application = tap(new Application)->setAutoExit(false);
         $exitCode = $application->run(
             new ArrayInput([
                 'command' => 'fix',
@@ -23,7 +23,7 @@ class FormattingTest extends TestCase
                 '--diff' => true,
                 '--verbose' => true,
             ]),
-            $output = new BufferedOutput()
+            $output = new BufferedOutput
         );
 
         $this->assertEquals(

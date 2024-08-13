@@ -10,7 +10,7 @@ class ConfigTest extends TestCase
 {
     public function test_can_use_laravel_presets()
     {
-        $config = (new Config())->setRiskyAllowed(true);
+        $config = (new Config)->setRiskyAllowed(true);
 
         $this->assertSame(
             Config::RULE_DEFINITIONS,
@@ -20,7 +20,7 @@ class ConfigTest extends TestCase
 
     public function test_can_override_preset_rules()
     {
-        $config = (new Config())
+        $config = (new Config)
             ->setRules([
                 'visibility_required' => false,
             ]);
