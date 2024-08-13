@@ -10,6 +10,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.15.0
+### Changed
+
+- Add/Configure new_with_parentheses rule (see [laravel/pint#285](https://github.com/laravel/pint/pull/285))
+
 ## 2.14.0
 ### Changed
 
