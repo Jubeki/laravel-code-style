@@ -21,7 +21,6 @@ jobs:
         exclude:
           - php-version: '8.1'
             laravel-version: ^11.0
-        exclude:
           - php-version: '8.4'
             laravel-version: ^10.0
     steps:
