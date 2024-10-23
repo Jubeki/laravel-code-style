@@ -10,6 +10,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.16.0
+### Changed
+
+- Enforce snake_case methods for PHPUnit method (see [laravel/pint#300](https://github.com/laravel/pint/pull/300))
+- Enforce visibility for PHPUnit setUp and tearDown methods (see [laravel/pint#301](https://github.com/laravel/pint/pull/301))
+
 ## 2.15.0
 ### Changed
 
