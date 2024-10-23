@@ -153,6 +153,7 @@ class Config extends \PhpCsFixer\Config
         'ordered_interfaces' => true,
         'ordered_traits' => true,
         'php_unit_method_casing' => ['case' => 'snake_case'],
+        'php_unit_set_up_tear_down_visibility' => true,
         'phpdoc_align' => [
             'align' => 'left',
             'spacing' => [
