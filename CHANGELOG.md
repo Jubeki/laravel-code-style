@@ -10,6 +10,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.17.0
+### Changed
+
+- Enforce single_line_command_spacing rule (see [laravel/pint#315](https://github.com/laravel/pint/pull/315))
+
 ## 2.16.0
 ### Changed
 
