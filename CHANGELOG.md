@@ -10,6 +10,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed 
 ### Removed 
 
+## 2.18.0
+### Changed
+
+- Support Laravel 12
+- Add no_unneeded_import_alias rule (see [laravel/pint#334](https://github.com/laravel/pint/pull/334))
+
 ## 2.17.0
 ### Changed
 
