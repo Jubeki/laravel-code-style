@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-    <a href="https://laravel.com"><img alt="Supports Laravel 9.x - 12.x" src="https://img.shields.io/badge/Laravel-9.x%20to%2012.x-FF2D20?style=for-the-badge&logo=laravel"></a>
+    <a href="https://laravel.com"><img alt="Supports Laravel 9.x - 13.x" src="https://img.shields.io/badge/Laravel-9.x%20to%2013.x-FF2D20?style=for-the-badge&logo=laravel"></a>
     <a href="https://php.net"><img alt="Supports PHP 8.0 - 8.5" src="https://img.shields.io/badge/PHP-8.0%20to%208.5-777BB4?style=for-the-badge&logo=php"></a>
 </p>
 
